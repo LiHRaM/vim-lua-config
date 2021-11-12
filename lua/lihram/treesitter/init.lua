@@ -1,0 +1,1 @@
+require("lihram.treesitter.config")
