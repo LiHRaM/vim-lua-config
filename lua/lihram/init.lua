@@ -1,3 +1,5 @@
 require("lihram.treesitter")
 require("lihram.lspconfig")
 require("lihram.plugins")
+require("lihram.keymappings")
+require("lihram.options")
