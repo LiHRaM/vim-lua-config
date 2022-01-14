@@ -1,4 +1,10 @@
-require'nvim-treesitter.configs'.setup {
+-- Zig is the most straightforward way to compile the treesitter grammars, as it can be installed via scoop and just works OOTB.
+local sysname = vim.loop.os_uname().sysname
+if("Windows_NT" == sysname) then
+	require"nvim-treesitter.install".compilers = { "zig" }
+end
+
+require"nvim-treesitter.configs".setup {
 	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
 	ensure_installed = "maintained",
 
