@@ -10,39 +10,38 @@
 
   outputs = { self, nixpkgs, neovim-overlay, flake-utils, ... }@inputs:
     flake-utils.lib.eachDefaultSystem (system:
-      let
-        src = ./.;
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [
-            neovim-overlay.overlay
-          ];
-        };
+    let
+      src = ./.;
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          neovim-overlay.overlay
+        ];
+      };
 
-        config = pkgs.neovimUtils.makeNeovimConfig {
-          customRC = ''
-            set runtimepath=${src},$VIMRUNTIME
-            luafile ${src}/init.lua
-          '';
-        };
-      in
-      rec {
-        apps.nvim = {
-          type = "app";
-          program = "${defaultPackage}/bin/nvim";
-        };
+      config = pkgs.neovimUtils.makeNeovimConfig {
+        customRC = ''
+          set runtimepath=${src},$VIMRUNTIME
+          luafile ${src}/init.lua
+        '';
+      };
+    in rec {
+      apps.nvim = {
+        type = "app";
+        program = "${defaultPackage}/bin/nvim";
+      };
 
-        defaultApp = apps.nvim;
-        defaultPackage = packages.neovim-lihram;
+      defaultApp = apps.nvim;
+      defaultPackage = packages.neovim-lihram;
 
-        devShell = pkgs.mkShell { buildInputs = [ packages.neovim-lihram ]; };
+      devShell = pkgs.mkShell { buildInputs = [ packages.neovim-lihram ]; };
 
-        overlay = (self: super: rec {
-          neovim-lihram = packages.neovim-lihram;
-        });
+      overlay = self: super: rec {
+        neovim-lihram = packages.neovim-lihram;
+      };
 
-        packages.neovim-lihram = pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped config;
-      }
-    );
+      packages.neovim-lihram = pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped config;
+    }
+  );
 }
 
