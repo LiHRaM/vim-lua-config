@@ -10,7 +10,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.list = true
-vim.opt.listchars = { tab = '▶ ', trail = '·' } -- »▶▸
+vim.opt.listchars = { tab = '▸ ', trail = '·' } -- »▶▸
 
 -- Telescope
 vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })
