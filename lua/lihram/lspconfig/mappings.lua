@@ -46,6 +46,7 @@ local servers = {
 	["omnisharp"] = {
 		cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) };
 	},
+    ["rnix"] = {},
 }
 
 for lsp, config in pairs(servers) do
