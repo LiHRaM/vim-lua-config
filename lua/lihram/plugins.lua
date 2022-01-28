@@ -19,6 +19,16 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    -- Navigation help
+    use {
+      "sudormrfbin/cheatsheet.nvim",
+      requires = {
+        {"nvim-telescope/telescope.nvim"},
+        {"nvim-lua/popup.nvim"},
+        {"nvim-lua/plenary.nvim"},
+      }
+    }
+
 	-- Themes
 	use 'vim-airline/vim-airline'
 	use 'vim-airline/vim-airline-themes'
