@@ -1,4 +1,3 @@
-local currentModule = ...
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -8,34 +7,18 @@ if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
--- Run PackerCompile on save.
-vim.cmd([[
-augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-augroup end
-]])
-
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-
     -- Themes
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
     use {
         'tomasiser/vim-code-dark',
-        config = function()
-            vim.cmd [[
-                colorscheme codedark
-                let g:airline_theme = 'codedark'
-            ]]
-        end
+        config = function() vim.cmd [[colorscheme codedark]] end
     }
 
     -- LSP
-    use { "neovim/nvim-lspconfig", config = function() require(currentModule .. ".lspconfig") end }
+    use { "neovim/nvim-lspconfig", config = function() require("lihram.plugins.lspconfig") end }
     use "tjdevries/lsp_extensions.nvim"
     use "nvim-lua/completion-nvim"
     use {
@@ -62,7 +45,7 @@ return require('packer').startup(function(use)
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
         },
-        config = function() require(currentModule .. ".nvim-cmp") end,
+        config = function() require("lihram.plugins.nvim-cmp") end,
     }
 
     -- Telescope
@@ -70,7 +53,7 @@ return require('packer').startup(function(use)
     use "nvim-lua/plenary.nvim"
     use {
         "nvim-telescope/telescope.nvim",
-        config = function() require(currentModule .. ".telescope") end,
+        config = function() require("lihram.plugins.telescope") end,
     }
     use { 
         "nvim-telescope/telescope-fzf-native.nvim", 
@@ -78,7 +61,7 @@ return require('packer').startup(function(use)
     }
     use {
         "nvim-treesitter/nvim-treesitter", 
-        config = function() require(currentModule .. ".treesitter") end,
+        config = function() require("lihram.plugins.treesitter") end,
         run = ':TSUpdate'
     }
 
@@ -90,6 +73,14 @@ return require('packer').startup(function(use)
 
     -- Base64
     use "taybart/b64.nvim"
+
+    -- Statusline
+    use {
+        "glepnir/galaxyline.nvim",
+        branch = "main",
+        config = function() require("lihram.plugins.galaxyline") end,
+        requires = {"kyazdani42/nvim-web-devicons"},
+    }
 
     -- Navigation help
     use {
