@@ -11,7 +11,7 @@ require("lualine").setup {
     lualine_a = {"buffers"},
     lualine_b = {},
     lualine_c = {},
-    lualine_x = {"require'lsp-status'.status()"},
+    lualine_x = {},
     lualine_y = {"filetype"},
     lualine_z = {"tabs"},
   },
