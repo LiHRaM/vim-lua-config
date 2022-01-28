@@ -85,10 +85,12 @@ return require('packer').startup(function(use)
 
     -- Statusline
     use {
-        "NTBBloodbath/galaxyline.nvim",
-        branch = "main",
-        requires = {"kyazdani42/nvim-web-devicons"},
-        config = function() require("lihram.plugins.galaxyline") end,
+        "nvim-lualine/lualine.nvim",
+        requires = {
+            {"kyazdani42/nvim-web-devicons", opt = true},
+            {"nvim-lua/lsp-status.nvim"},
+        },
+        config = function() require("lihram.plugins.lualine") end,
     }
 
     -- Navigation help
