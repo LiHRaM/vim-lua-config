@@ -32,7 +32,14 @@ return require('packer').startup(function(use)
 	-- Themes
 	use 'vim-airline/vim-airline'
 	use 'vim-airline/vim-airline-themes'
-	use 'tomasiser/vim-code-dark'
+	use { 'tomasiser/vim-code-dark',
+		config = function()
+          	vim.cmd [[
+          	colorscheme codedark
+          	let g:airline_theme = 'codedark'
+          	]]
+      	end
+    	}
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
