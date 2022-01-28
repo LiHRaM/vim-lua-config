@@ -137,6 +137,22 @@
         "type": "github"
       }
     },
+    "nvim-plugin:lsp-extensions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631389468,
+        "narHash": "sha256-xCxagAyscEgVYOfd1gTd3PDG8TOcztxpqFVZwX5T/Vs=",
+        "owner": "tjdevries",
+        "repo": "lsp_extensions.nvim",
+        "rev": "4011f4aec61ba59c734f5dbf52e91f258b99d985",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tjdevries",
+        "repo": "lsp_extensions.nvim",
+        "type": "github"
+      }
+    },
     "nvim-plugin:lualine.nvim": {
       "flake": false,
       "locked": {
@@ -182,6 +198,22 @@
       "original": {
         "owner": "hrsh7th",
         "repo": "nvim-cmp",
+        "type": "github"
+      }
+    },
+    "nvim-plugin:nvim-dap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642855401,
+        "narHash": "sha256-jrv1tTgHr/+W2RI19JRN8vS7VbptaDC7Z6XmX3Yr6mk=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "rev": "c9a58267524f560112ecb6faa36ab2b5bc2f78a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
         "type": "github"
       }
     },
@@ -265,6 +297,38 @@
         "type": "github"
       }
     },
+    "nvim-plugin:telescope-fzf-native.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1637772424,
+        "narHash": "sha256-gd/nNgMhvHdJWOlHMdYxY8Hi8Qo4F66TjKSewNKNR3I=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "rev": "b8662b076175e75e6497c59f3e2799b879d7b954",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "type": "github"
+      }
+    },
+    "nvim-plugin:telescope-ui-select.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1637772424,
+        "narHash": "sha256-gd/nNgMhvHdJWOlHMdYxY8Hi8Qo4F66TjKSewNKNR3I=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "rev": "b8662b076175e75e6497c59f3e2799b879d7b954",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "type": "github"
+      }
+    },
     "nvim-plugin:telescope.nvim": {
       "flake": false,
       "locked": {
@@ -281,21 +345,42 @@
         "type": "github"
       }
     },
+    "nvim-plugin:vim-code-dark": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1639749530,
+        "narHash": "sha256-+inOvbSm3PI/vkw+32BD+UfFhncnzF9fQFtWw1t/OsU=",
+        "owner": "tomasiser",
+        "repo": "vim-code-dark",
+        "rev": "7fe0dc672b20ef62962494560a0bc656fb237346",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tomasiser",
+        "repo": "vim-code-dark",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs_2",
         "nvim-plugin:editorconfig-vim": "nvim-plugin:editorconfig-vim",
+        "nvim-plugin:lsp-extensions": "nvim-plugin:lsp-extensions",
         "nvim-plugin:lualine.nvim": "nvim-plugin:lualine.nvim",
         "nvim-plugin:null-ls.nvim": "nvim-plugin:null-ls.nvim",
         "nvim-plugin:nvim-cmp": "nvim-plugin:nvim-cmp",
+        "nvim-plugin:nvim-dap": "nvim-plugin:nvim-dap",
         "nvim-plugin:nvim-lspconfig": "nvim-plugin:nvim-lspconfig",
         "nvim-plugin:nvim-treesitter": "nvim-plugin:nvim-treesitter",
         "nvim-plugin:nvim-web-devicons": "nvim-plugin:nvim-web-devicons",
         "nvim-plugin:plenary.nvim": "nvim-plugin:plenary.nvim",
         "nvim-plugin:popup.nvim": "nvim-plugin:popup.nvim",
-        "nvim-plugin:telescope.nvim": "nvim-plugin:telescope.nvim"
+        "nvim-plugin:telescope-fzf-native.nvim": "nvim-plugin:telescope-fzf-native.nvim",
+        "nvim-plugin:telescope-ui-select.nvim": "nvim-plugin:telescope-ui-select.nvim",
+        "nvim-plugin:telescope.nvim": "nvim-plugin:telescope.nvim",
+        "nvim-plugin:vim-code-dark": "nvim-plugin:vim-code-dark"
       }
     }
   },
