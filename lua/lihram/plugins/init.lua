@@ -85,10 +85,10 @@ return require('packer').startup(function(use)
 
     -- Statusline
     use {
-        "glepnir/galaxyline.nvim",
+        "NTBBloodbath/galaxyline.nvim",
         branch = "main",
-        config = function() require("lihram.plugins.galaxyline") end,
         requires = {"kyazdani42/nvim-web-devicons"},
+        config = function() require("lihram.plugins.galaxyline") end,
     }
 
     -- Navigation help
