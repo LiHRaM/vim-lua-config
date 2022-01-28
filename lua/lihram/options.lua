@@ -22,12 +22,14 @@ vim.diagnostic.config({
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 
--- Tab switches buffer
-vim.api.nvim_set_keymap("n", "<TAB>", ":bnext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-TAB>", ":bprevious<CR>", { noremap = true, silent = true })
-
 -- Move selected line in visual mode
 vim.api.nvim_set_keymap("x", "<M-Up>", ":move '<-2<CR>gv-gv'", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<M-Down>", ":move '>+1<CR>gv-gv'", { noremap = true, silent = true })
 
+-- Tab switches buffer
+vim.api.nvim_set_keymap("n", "<TAB>", ":bnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-TAB>", ":bprevious<CR>", { noremap = true, silent = true })
+
+-- Close current buffer with <C-w>
+vim.api.nvim_set_keymap("n", "<C-w>", ":bd<CR>", { noremap = true, silent = true })
 
