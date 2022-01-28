@@ -13,9 +13,10 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.list = true
 vim.opt.listchars = { tab = '▸ ', trail = '·' } -- »▶▸
 
--- Telescope
-vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+-- Diagnostics
+vim.diagnostic.config({
+    virtual_text = false
+})
 
 -- Indentation
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
