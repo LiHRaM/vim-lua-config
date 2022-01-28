@@ -31,6 +31,15 @@ return require('packer').startup(function(use)
         config = function() require("trouble").setup {} end,
     }
 
+    -- DAP
+    use {
+        "mfussenegger/nvim-dap",
+        requires = {
+            {"jbyuki/one-small-step-for-vimkind"}, -- Neovim Lua
+        },
+        config = function() require("lihram.plugins.nvim-dap") end,
+    }
+
     -- Lua
     use "tjdevries/nlua.nvim"
 
