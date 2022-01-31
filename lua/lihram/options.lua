@@ -33,3 +33,8 @@ vim.api.nvim_set_keymap("n", "<S-TAB>", ":bprevious<CR>", { noremap = true, sile
 -- Close current buffer with <C-w>
 vim.api.nvim_set_keymap("n", "<C-w>", ":bd<CR>", { noremap = true, silent = true })
 
+-- Switch between splits
+vim.api.nvim_set_keymap("n", "<A-Up>", ":wincmd k<CR>", { noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-Down>", ":wincmd j<CR>", { noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-Left>", ":wincmd h<CR>", { noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-Right>", ":wincmd l<CR>", { noremap = true, silent = true})
