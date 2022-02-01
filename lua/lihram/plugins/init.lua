@@ -43,10 +43,6 @@ M.setup_with_packer = function()
         use "tjdevries/lsp_extensions.nvim"
         use "nvim-lua/completion-nvim"
         use {
-            "glepnir/lspsaga.nvim",
-            requires = { "neovim/nvim-lspconfig" }
-        }
-        use {
             "folke/trouble.nvim",
             requires = "kyazdani42/nvim-web-devicons",
             config = trouble_config,
@@ -74,6 +70,7 @@ M.setup_with_packer = function()
                 "hrsh7th/cmp-cmdline",
                 "L3MON4D3/LuaSnip",
                 "saadparwaiz1/cmp_luasnip",
+                "ray-x/lsp_signature.nvim",
             },
             config = nvim_cmp_config,
         }
