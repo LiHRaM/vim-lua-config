@@ -95,8 +95,7 @@
         customRC = ''
           set runtimepath=${src},$VIMRUNTIME
           lua << EOF
-            require("lihram.options")
-            require("lihram.plugins.no-packer")
+            require("lihram").setup_no_packer()
           EOF
         '';
 
