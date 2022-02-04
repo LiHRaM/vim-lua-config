@@ -39,7 +39,10 @@ M.setup_with_packer = function()
         }
 
         -- LSP
-        use { "neovim/nvim-lspconfig", config = function() require("lihram.plugins.lspconfig") end }
+        use {
+            "neovim/nvim-lspconfig",
+            config = function() require("lihram.plugins.lspconfig") end,
+        }
         use "tjdevries/lsp_extensions.nvim"
         use "nvim-lua/completion-nvim"
         use {
