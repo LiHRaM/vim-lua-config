@@ -1,4 +1,8 @@
-require("trouble").setup()
+require("trouble").setup {
+    auto_preview = false,
+    icons = true,
+    use_diagnostic_signs = true,
+}
 
 local opts = { noremap = true, silent = true }
 
