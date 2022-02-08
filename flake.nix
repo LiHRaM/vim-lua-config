@@ -42,12 +42,12 @@
       url = "github:nvim-telescope/telescope.nvim";
       flake = false;
     };
-    "nvim-plugin:telescope-fzf-native.nvim" = {
-      url = "github:nvim-telescope/telescope-fzf-native.nvim";
+    "nvim-plugin:telescope-fzy-native.nvim" = {
+      url = "github:nvim-telescope/telescope-fzy-native.nvim";
       flake = false;
     };
     "nvim-plugin:telescope-ui-select.nvim" = {
-      url = "github:nvim-telescope/telescope-fzf-native.nvim";
+      url = "github:nvim-telescope/telescope-ui-select.nvim";
       flake = false;
     };
     "nvim-plugin:popup.nvim" = {

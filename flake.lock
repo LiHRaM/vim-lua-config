@@ -297,35 +297,35 @@
         "type": "github"
       }
     },
-    "nvim-plugin:telescope-fzf-native.nvim": {
+    "nvim-plugin:telescope-fzy-native.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1637772424,
-        "narHash": "sha256-gd/nNgMhvHdJWOlHMdYxY8Hi8Qo4F66TjKSewNKNR3I=",
+        "lastModified": 1617877633,
+        "narHash": "sha256-ntSc/Z2KGwAPwBSgQ2m+Q9HgpGUwGbd+4fA/dtzOXY4=",
         "owner": "nvim-telescope",
-        "repo": "telescope-fzf-native.nvim",
-        "rev": "b8662b076175e75e6497c59f3e2799b879d7b954",
+        "repo": "telescope-fzy-native.nvim",
+        "rev": "7b3d2528102f858036627a68821ccf5fc1d78ce4",
         "type": "github"
       },
       "original": {
         "owner": "nvim-telescope",
-        "repo": "telescope-fzf-native.nvim",
+        "repo": "telescope-fzy-native.nvim",
         "type": "github"
       }
     },
     "nvim-plugin:telescope-ui-select.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1637772424,
-        "narHash": "sha256-gd/nNgMhvHdJWOlHMdYxY8Hi8Qo4F66TjKSewNKNR3I=",
+        "lastModified": 1636895558,
+        "narHash": "sha256-RKwoXrIWhW29kPEyQSGDg+0kcxCXPEl+U+DmuAgHhNM=",
         "owner": "nvim-telescope",
-        "repo": "telescope-fzf-native.nvim",
-        "rev": "b8662b076175e75e6497c59f3e2799b879d7b954",
+        "repo": "telescope-ui-select.nvim",
+        "rev": "d02a3d3a6b3f6b933c43a28668ae18f78846d3aa",
         "type": "github"
       },
       "original": {
         "owner": "nvim-telescope",
-        "repo": "telescope-fzf-native.nvim",
+        "repo": "telescope-ui-select.nvim",
         "type": "github"
       }
     },
@@ -377,7 +377,7 @@
         "nvim-plugin:nvim-web-devicons": "nvim-plugin:nvim-web-devicons",
         "nvim-plugin:plenary.nvim": "nvim-plugin:plenary.nvim",
         "nvim-plugin:popup.nvim": "nvim-plugin:popup.nvim",
-        "nvim-plugin:telescope-fzf-native.nvim": "nvim-plugin:telescope-fzf-native.nvim",
+        "nvim-plugin:telescope-fzy-native.nvim": "nvim-plugin:telescope-fzy-native.nvim",
         "nvim-plugin:telescope-ui-select.nvim": "nvim-plugin:telescope-ui-select.nvim",
         "nvim-plugin:telescope.nvim": "nvim-plugin:telescope.nvim",
         "nvim-plugin:vim-code-dark": "nvim-plugin:vim-code-dark"
