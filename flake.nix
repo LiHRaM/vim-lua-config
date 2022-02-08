@@ -110,7 +110,11 @@
       defaultApp = apps.nvim;
       defaultPackage = packages.neovim-lihram;
 
-      devShell = pkgs.mkShell { buildInputs = [ packages.neovim-lihram ]; };
+      devShell = pkgs.mkShell { buildInputs = with pkgs; [
+        packages.neovim-lihram
+        rnix-lsp
+        sumneko-lua-language-server
+    ]; };
 
       overlay = self: super: rec {
         neovim-lihram = packages.neovim-lihram;
