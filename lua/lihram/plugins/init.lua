@@ -9,13 +9,13 @@ local telescope_config = function() require("lihram.plugins.telescope") end
 local nvim_cmp_config = function() require("lihram.plugins.nvim-cmp") end
 
 M.setup_no_packer = function()
-  vim_code_dark_config()
-  trouble_config()
-  nvim_dap_config()
-  lualine_config()
-  treesitter_config()
-  telescope_config()
-  nvim_cmp_config()
+    vim_code_dark_config()
+    trouble_config()
+    nvim_dap_config()
+    lualine_config()
+    treesitter_config()
+    telescope_config()
+    nvim_cmp_config()
 end
 
 M.setup_with_packer = function()
@@ -85,12 +85,9 @@ M.setup_with_packer = function()
             "nvim-telescope/telescope.nvim",
             config = telescope_config,
         }
-        use { 
-            "nvim-telescope/telescope-fzf-native.nvim", 
-            run = "make" 
-        }
+        use { "nvim-telescope/telescope-fzy-native.nvim" }
         use {
-            "nvim-treesitter/nvim-treesitter", 
+            "nvim-treesitter/nvim-treesitter",
             config = treesitter_config,
             run = ':TSUpdate'
         }

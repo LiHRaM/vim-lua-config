@@ -14,9 +14,16 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '▸ ', trail = '·' } -- »▶▸
 
 -- Diagnostics
-vim.diagnostic.config({
-    virtual_text = false
-})
+vim.diagnostic.config {
+    virtual_text = false,
+    signs = false,
+    underline = true,
+    severity_sort = true,
+    update_in_insert = true,
+    float = {
+        source = "always",
+    },
+}
 
 -- Indentation
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })

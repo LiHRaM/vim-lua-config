@@ -1,6 +1,6 @@
 local nvim_lsp = require("lspconfig")
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -25,6 +25,20 @@ local on_attach = function(_, bufnr)
     buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+    -- Highlight symbol under cursor
+    if client.resolved_capabilities.document_highlight then
+        vim.cmd [[
+        hi! LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
+        hi! LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
+        hi! LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
+        augroup lsp_document_highlight
+        autocmd! * <buffer>
+        autocmd! CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd! CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+        augroup END
+        ]]
+    end
 end
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
