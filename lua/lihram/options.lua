@@ -7,11 +7,13 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.list = true
-vim.opt.listchars = { tab = '▸ ', trail = '·' } -- »▶▸
+vim.opt.ignorecase = true                               -- Ignore case letters when searching
+vim.opt.smartcase = true                                -- Ignore lowercase for the whole pattern
+vim.opt.clipboard = "unnamedplus"                       -- Use system clipboard for copy/paste
+vim.opt.list = true                                     -- Show characters that are normally invisible
+vim.opt.listchars = { tab = '▸ ', trail = '·' } -- »▶▸  -- Characters that indicate whitespace type
+vim.opt.swapfile = false                                -- Disable swapfile
+vim.opt.mouse = "a"                                     -- Enable mouse support
 
 -- Diagnostics
 vim.diagnostic.config {
