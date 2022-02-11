@@ -7,6 +7,7 @@ local lualine_config = function() require("lihram.plugins.lualine") end
 local treesitter_config = function() require("lihram.plugins.treesitter") end
 local telescope_config = function() require("lihram.plugins.telescope") end
 local nvim_cmp_config = function() require("lihram.plugins.nvim-cmp") end
+local nvim_tree_config = function() require("lihram.plugins.nvim-tree") end
 
 M.setup_no_packer = function()
     vim_code_dark_config()
@@ -16,6 +17,7 @@ M.setup_no_packer = function()
     treesitter_config()
     telescope_config()
     nvim_cmp_config()
+    nvim_tree_config()
 end
 
 M.setup_with_packer = function()
@@ -108,6 +110,12 @@ M.setup_with_packer = function()
                 {"kyazdani42/nvim-web-devicons", opt = true},
             },
             config = lualine_config,
+        }
+
+        use {
+            "kyazdani42/nvim-tree.lua",
+            requires = { "kyazdani42/nvim-web-devicons" },
+            config = nvim_tree_config,
         }
 
         -- Navigation help
