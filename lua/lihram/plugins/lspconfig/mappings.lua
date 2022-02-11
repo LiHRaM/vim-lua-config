@@ -58,7 +58,6 @@ local servers = {
     ["rnix"] = {},
     ["tsserver"] = {},
     ["sumneko_lua"] = {
-        cmd = { "sumneko_lua.bat" },
         settings = {
             Lua = {
                 version = "LuaJIT",
