@@ -10,67 +10,10 @@
     };
 
     # Plugins
-    "nvim-plugin:nvim-web-devicons" = {
-      url = "github:kyazdani42/nvim-web-devicons";
+    "nvim-plugin:packer.nvim" = {
+      url = "github:wbthomason/packer.nvim";
       flake = false;
     };
-    "nvim-plugin:nvim-treesitter" = {
-      url = "github:nvim-treesitter/nvim-treesitter";
-      flake = false;
-    };
-    "nvim-plugin:nvim-lspconfig" = {
-      url = "github:neovim/nvim-lspconfig";
-      flake = false;
-    };
-    "nvim-plugin:lsp-extensions" = {
-      url = "github:tjdevries/lsp_extensions.nvim";
-      flake = false;
-    };
-    "nvim-plugin:nvim-dap" = {
-      url = "github:mfussenegger/nvim-dap";
-      flake = false;
-    };
-    "nvim-plugin:plenary.nvim" = {
-      url = "github:nvim-lua/plenary.nvim";
-      flake = false;
-    };
-    "nvim-plugin:nvim-cmp" = {
-      url = "github:hrsh7th/nvim-cmp";
-      flake = false;
-    };
-    "nvim-plugin:telescope.nvim" = {
-      url = "github:nvim-telescope/telescope.nvim";
-      flake = false;
-    };
-    "nvim-plugin:telescope-fzy-native.nvim" = {
-      url = "github:nvim-telescope/telescope-fzy-native.nvim";
-      flake = false;
-    };
-    "nvim-plugin:telescope-ui-select.nvim" = {
-      url = "github:nvim-telescope/telescope-ui-select.nvim";
-      flake = false;
-    };
-    "nvim-plugin:popup.nvim" = {
-      url = "github:nvim-lua/popup.nvim";
-      flake = false;
-    };
-    "nvim-plugin:editorconfig-vim" = {
-      url = "github:editorconfig/editorconfig-vim";
-      flake = false;
-    };
-    "nvim-plugin:null-ls.nvim" = {
-      url = "github:jose-elias-alvarez/null-ls.nvim";
-      flake = false;
-    };
-    "nvim-plugin:lualine.nvim" = {
-      url = "github:nvim-lualine/lualine.nvim";
-      flake = false;
-    };
-    "nvim-plugin:vim-code-dark" = {
-      url = "github:tomasiser/vim-code-dark";
-      flake = false;
-    };
-
   };
 
   outputs = { self, nixpkgs, neovim-overlay, flake-utils, ... }@inputs:
@@ -95,7 +38,7 @@
         customRC = ''
           set runtimepath=${src},$VIMRUNTIME
           lua << EOF
-            require("lihram").setup_no_packer()
+            require("lihram").setup_with_packer()
           EOF
         '';
 
