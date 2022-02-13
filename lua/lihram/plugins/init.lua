@@ -8,6 +8,7 @@ local treesitter_config = function() require("lihram.plugins.treesitter") end
 local telescope_config = function() require("lihram.plugins.telescope") end
 local nvim_cmp_config = function() require("lihram.plugins.nvim-cmp") end
 local nvim_tree_config = function() require("lihram.plugins.nvim-tree") end
+local b64_config = function() require("lihram.plugins.b64") end
 
 M.setup_no_packer = function()
     vim_code_dark_config()
@@ -18,6 +19,7 @@ M.setup_no_packer = function()
     telescope_config()
     nvim_cmp_config()
     nvim_tree_config()
+    b64_config()
 end
 
 M.setup_with_packer = function()
@@ -101,7 +103,10 @@ M.setup_with_packer = function()
         use "tpope/vim-commentary"
 
         -- Base64
-        use "taybart/b64.nvim"
+        use {
+            "taybart/b64.nvim",
+            config = b64_config,
+        }
 
         -- Statusline
         use {
